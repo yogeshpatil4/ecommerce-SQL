@@ -22,7 +22,7 @@ This project uses a collection of CSV files representing a simplified e-commerce
 To ensure accurate analysis, several data cleaning steps were performed using SQL:
 
 - **Converted datetime columns** (`order_purchase_timestamp` and `order_approved_at`) to proper DATETIME format using `STR_TO_DATE`.
-'''sql
+```sql
 UPDATE df_orders 
 SET order_purchase_timestamp = 
 STR_TO_DATE(order_purchase_timestamp,'%Y-%m-%d %H:%i:%s');
@@ -37,7 +37,9 @@ UPDATE df_orders SET order_approved_at=
 STR_TO_DATE(order_approved_at,'%Y-%m-%d %H:%i:%s');
 
 ALTER TABLE df_orders MODIFY order_approved_at DATETIME;
-  
+
+  ```
+
 - **Removed rows with missing approval timestamps** from the `df_orders` table.
 - **Deleted rows with empty product category names** from the `df_products` table.
 - **Removed duplicate product entries** by using a CTE and `ROW_NUMBER()` to identify and keep only the first occurrence of each `product_id`.
