@@ -2,7 +2,7 @@
 ## 📚 Table of Contents
 - [📌 Project Overview](#-Project-Overview)
 - [📦 Dataset Used](#-Dataset-Used)
-- [🧹 Data Cleaning Performed](#-data-cleaning-performed)
+- [🧹 Data Cleaning](#-Data-Cleaning)
 - [🔍 Key Business Questions Answered](#-key-business-questions-answered)
 - [🧰 Tools Used](#-tools-used)
 - [🛠️ Skills Covered](#-skills-covered)
