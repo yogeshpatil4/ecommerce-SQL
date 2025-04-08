@@ -4,7 +4,7 @@
 - [📦 Dataset Used](#-Dataset-Used)
 - [🧹 Data Cleaning](#-Data-Cleaning)
 - [🔍 Key Business Questions Answered](#-key-business-questions-answered)
-- [🧰 Tools Used](#-tools-used)
+- [🧰 Tools Used](#-Tools-Used)
 - [🛠️ Skill Covered](#-Skill-Covered)
 - [✅ Conclusion](#-conclusion)
 
