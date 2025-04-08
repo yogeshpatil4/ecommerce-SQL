@@ -30,19 +30,31 @@ STR_TO_DATE(order_purchase_timestamp,'%Y-%m-%d %H:%i:%s');
 ALTER TABLE df_orders MODIFY order_purchase_timestamp DATETIME;
 
 
-DELETE  FROM ecommerce.df_orders
+  ```
+
+- **Removed rows with missing approval timestamps** from the `df_orders` table.
+  ```sql
+ DELETE  FROM ecommerce.df_orders
 WHERE order_approved_at="";
 
 UPDATE df_orders SET order_approved_at=
 STR_TO_DATE(order_approved_at,'%Y-%m-%d %H:%i:%s');
 
 ALTER TABLE df_orders MODIFY order_approved_at DATETIME;
-
-  ```
-
-- **Removed rows with missing approval timestamps** from the `df_orders` table.
+```
+  
 - **Deleted rows with empty product category names** from the `df_products` table.
+   ```sql
+DELETE FROM df_products
+WHERE product_category_name="";
+```
 - **Removed duplicate product entries** by using a CTE and `ROW_NUMBER()` to identify and keep only the first occurrence of each `product_id`.
+  ```sql
+  WITH cte AS 
+(SELECT *,ROW_NUMBER() OVER(PARTITION BY product_id ORDER BY product_id) AS rn
+ FROM df_products)
+DELETE FROM df_products WHERE product_id IN (SELECT product_id FROM cte WHERE rn >1)
+```
 
 These steps ensured consistent and clean data before starting the analysis.
 
