@@ -5,7 +5,7 @@
 - [🧹 Data Cleaning](#-Data-Cleaning)
 - [🔍 Key Business Questions Answered](#-key-business-questions-answered)
 - [🧰 Tools Used](#-Tools-Used)
-- [🛠️ Skill Covered](#-Skill-Covered)
+- [🛠️ Skills Covered](#-skills-covered)
 - [✅ Conclusion](#-conclusion)
 
 ## 📌 Project Overview
@@ -288,7 +288,7 @@ ORDER BY total_spent DESC;
 ## 🧰 Tools Used
 - **MySQL** – for querying and analyzing the data
   
-## 🛠️ Skill Covered
+## 🛠️ Skills Covered
 - SQL Joins (INNER JOIN, LEFT JOIN)
 - Aggregation Functions (`SUM`, `COUNT`, `AVG`, `MAX`, `MIN`)
 - Window Functions (`RANK()`, `NTILE()`, `CUME_DIST()`, `SUM() OVER`)
