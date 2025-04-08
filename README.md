@@ -33,7 +33,7 @@ ALTER TABLE df_orders MODIFY order_purchase_timestamp DATETIME;
   ```
 
 - **Removed rows with missing approval timestamps** from the `df_orders` table.
-  ```sql
+```sql
  DELETE  FROM ecommerce.df_orders
 WHERE order_approved_at="";
 
@@ -44,12 +44,12 @@ ALTER TABLE df_orders MODIFY order_approved_at DATETIME;
 ```
   
 - **Deleted rows with empty product category names** from the `df_products` table.
-   ```sql
+ ```sql
 DELETE FROM df_products
 WHERE product_category_name="";
 ```
 - **Removed duplicate product entries** by using a CTE and `ROW_NUMBER()` to identify and keep only the first occurrence of each `product_id`.
-  ```sql
+```sql
   WITH cte AS 
 (SELECT *,ROW_NUMBER() OVER(PARTITION BY product_id ORDER BY product_id) AS rn
  FROM df_products)
