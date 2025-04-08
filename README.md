@@ -1,11 +1,17 @@
 # 🛒 E-commerce SQL Analysis Project
 ## 📚 Table of Contents
+- [📌 Project Overview](#-Project-Overview)
 - [📁 Datasets Used](#-datasets-used)
 - [🧹 Data Cleaning Performed](#-data-cleaning-performed)
 - [🔍 Key Business Questions Answered](#-key-business-questions-answered)
 - [🧰 Tools Used](#-tools-used)
 - [🛠️ Skills Covered](#-skills-covered)
 - [✅ Conclusion](#-conclusion)
+
+## 📌 Project Overview
+
+This SQL project focuses on analyzing an e-commerce business using structured datasets that include information about customers, products, orders, order items, and payments. The goal is to extract actionable insights using SQL, helping stakeholders understand customer behavior, product trends, payment patterns, and overall business performance.
+
 
 ## 📦 Dataset Used
 
