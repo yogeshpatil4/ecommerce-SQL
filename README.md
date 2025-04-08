@@ -1,7 +1,7 @@
 # 🛒 E-commerce SQL Analysis Project
 ## 📚 Table of Contents
 - [📌 Project Overview](#-Project-Overview)
-- [📦 Dataset Used](#-datasets-used)
+- [📦 Dataset Used](#-Datasets-Used)
 - [🧹 Data Cleaning Performed](#-data-cleaning-performed)
 - [🔍 Key Business Questions Answered](#-key-business-questions-answered)
 - [🧰 Tools Used](#-tools-used)
