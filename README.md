@@ -67,7 +67,7 @@ These steps ensured consistent and clean data before starting the analysis.
 
 ## 🔍 Key Business Questions Answered
 ### 👥 Customer & Location Analysis
--  Which cities and states generated the highest total revenue?
+-  Which cities and states generated the highest total sale?
 ```sql
 SELECT customer_state,customer_city,ROUND(SUM(payment_value)) total_sale FROM df_customers
 JOIN df_orders ON df_customers.customer_id=df_orders.customer_id
