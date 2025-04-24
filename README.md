@@ -36,6 +36,12 @@ STR_TO_DATE(order_purchase_timestamp,'%Y-%m-%d %H:%i:%s');
 ALTER TABLE df_orders MODIFY order_purchase_timestamp DATETIME;
 
 
+UPDATE df_orders SET order_approved_at=
+STR_TO_DATE(order_approved_at,'%Y-%m-%d %H:%i:%s');
+
+ALTER TABLE df_orders MODIFY order_approved_at DATETIME;
+
+
   ```
 
 - **Removed rows with missing approval timestamps** from the `df_orders` table.
@@ -43,10 +49,7 @@ ALTER TABLE df_orders MODIFY order_purchase_timestamp DATETIME;
  DELETE  FROM ecommerce.df_orders
 WHERE order_approved_at="";
 
-UPDATE df_orders SET order_approved_at=
-STR_TO_DATE(order_approved_at,'%Y-%m-%d %H:%i:%s');
 
-ALTER TABLE df_orders MODIFY order_approved_at DATETIME;
 ```
   
 - **Deleted rows with empty product category names** from the `df_products` table.
